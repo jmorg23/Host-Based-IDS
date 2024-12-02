@@ -8,6 +8,7 @@ This is a homeade Host-Based Intrusion Detection System(IDS)
 * Once the program is running, it will prompt you to enter a number representing one of the network interfaces to listen.(The interfaces are shown above)
 * It will ask if you want to see incoming traffic. If “yes” then it will display all incoming traffic as it comes, else if not “yes” then it will not display packets.
 * Now it will be checking each packet and letting you know if anything is out of the ordinary for that network interface.
+* to cancel capture you can type q in the terminal to quit and view stats for that capture
 * Also every packet for the current capture will be stored in the out.pcap file (can be viewed via wireshark).
 
 
