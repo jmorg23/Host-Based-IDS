@@ -12,8 +12,7 @@ public class PacketInspecter extends Thread {
 
     private Packet packet;
     private Map<String, Integer> ipPacketCount = new HashMap<>();
-    private static final int PACKET_RATE = 1000; // more than 1000 packets in 1 second will be considered DOS
-                                                 // attack
+    private static final int PACKET_RATE = 1000; // more than 1000 packets in 1 second will be considered DOS attack
     private static final int SYN_FLOOD = 1000; // Number of SYN packets from a single IP in a short period
     private long lastTimestamp = System.currentTimeMillis();
 
@@ -52,8 +51,7 @@ public class PacketInspecter extends Thread {
         byte[] rawData = packet.getRawData();
 
         if (rawData != null && rawData.length > 0) {
-            // Check for SYN flag in the TCP header (TCP header starts after the Ethernet
-            // header)
+            // Check for SYN flag in the TCP header
             if (rawData.length > 60) {
                 byte tcpFlags = rawData[47 + 13]; // 47 is the start of the TCP header in the packet
 

@@ -92,9 +92,7 @@ public class IDS {
     public static PcapNetworkInterface getNetworkInterface() throws IOException {
 
         PcapNetworkInterface device;
-        while ((device = new NifSelector().selectNetworkInterface()) == null) {
-
-        }
+        while ((device = new NifSelector().selectNetworkInterface()) == null);
 
         return device;
     }
